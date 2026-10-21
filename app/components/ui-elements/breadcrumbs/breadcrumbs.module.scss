@@ -39,5 +39,6 @@
 }
 
 .breadcrumbs-current {
-  color: $grey-medium;
+  color: var(--muted-text-color);
+  cursor: default;
 }

@@ -3,15 +3,14 @@
 @use '~/assets/styles/mixins.scss' as *;
 
 .footer {
-  @include flex($justify-content: center);
+  @include flex($direction: row, $justify-content: space-between);
   width: 100%;
+  height: $footer-height-xs;
   max-width: $container-max-width;
-  padding: $spacing-basic 2 * $padding-basic;
+  padding: $padding-basic;
   box-sizing: border-box;
 
   @include breakpoint(large) {
-    flex-direction: row;
-    justify-content: space-between;
     height: $header-height;
     padding: 0 4 * $padding-basic;
   }
@@ -40,10 +39,10 @@
 
   &__link {
     @include flex($direction: row);
+    box-sizing: border-box;
     font-size: 0.6875rem;
     color: var(--text-dark);
     text-decoration: none;
-
     @include focus;
     @include hover;
 
@@ -68,12 +67,38 @@
   &__author {
     font-size: 0.875rem;
     font-weight: $font-bold;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     margin-left: 0.25rem;
+    padding-right: 6px;
     @include transition($element: color);
 
     &:hover {
       color: var(--secondary-color);
+    }
+  }
+
+  &__credit-text {
+    display: none;
+  }
+
+  &__copyright {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted-text-color);
+  }
+
+  @include breakpoint(large) {
+    &__author {
+      padding-right: 0;
+    }
+
+    &__credit-text {
+      display: inline;
+    }
+
+    &__copyright {
+      display: none;
     }
   }
 }

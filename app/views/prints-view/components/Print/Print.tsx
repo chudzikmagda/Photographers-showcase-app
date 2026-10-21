@@ -23,7 +23,7 @@ const PrintItem: React.FC<Print> = ({ image, titleKey, cta }): ReactElement => {
         onClick={navigateToLink}
       />
       <div className={styles.print__description}>
-        <h5 className={styles.print__title}>{t(titleKey)}</h5>
+        <h2 className={styles.print__title}>{t(titleKey)}</h2>
         <Button
           cta={t('PrintsView.cta')}
           apperance={ButtonApperance.PRIMARY_SOLID}

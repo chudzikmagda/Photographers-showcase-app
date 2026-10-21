@@ -6,5 +6,7 @@
 	"contact": "Kontakt",
 	"projects": "Projekty",
 	"changeLanguage": "Zmień język",
-	"changeMode": "Zmień motyw"
+	"changeMode": "Zmień motyw",
+	"openMenu": "Otwórz menu",
+	"closeMenu": "Zamknij menu"
 }

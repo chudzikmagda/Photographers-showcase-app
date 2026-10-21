@@ -20,7 +20,9 @@ const Footer: React.FC = () => {
         target="_blank"
         rel="noreferrer"
       >
-        {t('Footer.designAndDeveloped')} <span className={styles.footer__author}>{'{ MCH }'}</span>
+        <span className={styles['footer__credit-text']}>{t('Footer.designAndDeveloped')}</span>
+        <span className={styles['footer__copyright']}>by</span>
+        <span className={styles.footer__author}>{'{ MCH }'}</span>
       </a>
     </footer>
   );

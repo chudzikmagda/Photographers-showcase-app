@@ -6,6 +6,7 @@ body {
 
 .title {
   margin-bottom: 1rem;
+  font-size: 1.728rem;
 }
 
 .intro {
@@ -22,10 +23,14 @@ body {
 
 .leadText {
   margin: 0;
-  max-width: 20ch;
+  max-width: 100%;
   font-size: clamp(1rem, 4vw, 1.325rem);
   line-height: 1.2;
   font-weight: 600;
+
+  @media screen and (min-width: 992px) {
+    max-width: 20ch;
+  }
 }
 
 .description {

@@ -18,7 +18,7 @@ const PrintsView: React.FC = () => {
           <div className={styles['wrapper-s']}>
             <h1>{t('PrintsView.title')}</h1>
             <p>{t('PrintsView.longDescription')}</p>
-            <h3>{t('PrintsView.shortDescription')}</h3>
+            <h2 className={styles.prints__subtitle}>{t('PrintsView.shortDescription')}</h2>
           </div>
           <div className={`${styles.wrapper} ${styles.prints}`}>
             {printCollection.map((print: Print) => {

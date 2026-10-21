@@ -4,12 +4,12 @@ import { ContentType } from './content.types';
 
 const Content: React.FC<ContentProps> = ({ content, contentType }) => {
   return (
-    <div
+    <main
       className={styles.content}
       style={contentType === ContentType.FULLWIDTH ? { padding: 0 } : {}}
     >
       {content}
-    </div>
+    </main>
   );
 };
 

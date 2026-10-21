@@ -51,9 +51,19 @@
     }
 
     &--active {
-      color: $grey-medium;
+      color: $text-dark;
+      font-weight: 600;
       cursor: default;
-      pointer-events: none;
+
+      &::after {
+        background-color: $text-dark;
+        transform: scaleX(1);
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: $text-dark;
+      }
     }
 
     &-wrapper {

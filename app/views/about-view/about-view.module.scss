@@ -2,6 +2,11 @@
 @use '~/assets/styles/wrappers.scss' as *;
 
 .about-me {
+  &__intro {
+    font-size: 1.111rem;
+    line-height: 1.5;
+  }
+
   &__heroImage {
     max-width: 100%;
     height: auto;

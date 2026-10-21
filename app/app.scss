@@ -6,8 +6,10 @@
 @use 'assets/styles/mixins.scss' as *;
 
 :root {
-  --primary-color: rgba(191, 160, 115, 1);
-  --primary-color-20: rgba(191, 160, 115, 0.2);
+  --primary-color: rgb(138, 109, 65);
+  --primary-color-20: rgba(137, 104, 58, 0.2);
+  --primary-text-color: var(--primary-color);
+  --muted-text-color: rgba(115, 115, 115, 1);
   --primary-light: rgba(250, 249, 245, 1);
   --primary-dark: rgba(13, 15, 18, 1);
   --primary-dark-20: rgba(13, 15, 18, 0.2);
@@ -42,6 +44,10 @@ body,
 }
 
 body.dark {
+  --primary-color: rgba(191, 160, 115, 1);
+  --primary-color-20: rgba(191, 160, 115, 0.2);
+  --primary-text-color: var(--primary-color);
+  --muted-text-color: rgba(179, 179, 179, 1);
   --primary-light: rgba(17, 17, 17, 1);
   --primary-dark: rgba(242, 241, 241, 1);
   --primary-dark-70: rgba(242, 241, 241, 0.7);
@@ -77,6 +83,8 @@ body {
 }
 
 p,
+h1,
+h2,
 h3,
 h4 {
   a {
@@ -87,29 +95,18 @@ h4 {
     }
 
     &:link {
-      position: relative;
+      background-image: linear-gradient(var(--primary-color), var(--primary-color));
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
       @include transition;
-
-      &::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        height: 2px;
-        width: 100%;
-        background-color: var(--primary-color);
-        transform: scaleX(1);
-        transform-origin: center;
-        @include transition;
-      }
     }
 
     &:hover {
       color: var(--primary-color);
-
-      &::after {
-        transform: scaleX(0);
-      }
+      background-size: 0 2px;
     }
 
     @include focus;

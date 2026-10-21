@@ -21,7 +21,7 @@ const ProjectsView = () => {
         content={
           <div className={styles.wrapper}>
             <Breadcrumbs items={breadcrumbItems} />
-            <h3 className={styles.title}>{t(`${baseKey}.title`)}</h3>
+            <h1 className={styles.title}>{t(`${baseKey}.title`)}</h1>
             <div className={styles.projects}>
               {projects.map((project: ProjectData) => (
                 <div key={project.baseKey} className={styles['projects__wrapper']}>
@@ -37,7 +37,7 @@ const ProjectsView = () => {
                   </div>
                   <div>
                     <Link to={project.cta} className={styles['projects__link']}>
-                      <h6 className={styles['projects__title']}>{t(`${project.baseKey}.title`)}</h6>
+                      <h2 className={styles['projects__title']}>{t(`${project.baseKey}.title`)}</h2>
                       <p className={styles['projects__description']}>
                         {t(`${project.baseKey}.description`)}
                       </p>

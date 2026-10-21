@@ -4,14 +4,20 @@
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px;
 
   &__link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     color: $primary-color;
     text-decoration: none;
     transition: color 0.8s ease;
+
+    &--icon {
+      width: 36px;
+      height: 36px;
+    }
 
     &:focus {
       outline: none;
