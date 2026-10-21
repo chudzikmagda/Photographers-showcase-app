@@ -37,7 +37,7 @@ const ProjectShell: React.FC<ProjectShellProps> = ({ baseKey, images, title, des
         content={
           <div className={styles.wrapper}>
             <Breadcrumbs items={breadcrumbItems} />
-            <h3 className={styles.title}>{t(title)}</h3>
+            <h1 className={styles.title}>{t(title)}</h1>
             <div className={styles.intro}>
               {leadText !== `${baseKey}.leadText` && <p className={styles.leadText}>{leadText}</p>}
               {description && (

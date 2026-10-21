@@ -11,6 +11,10 @@
     gap: $padding-basic * 10;
   }
 
+  &__subtitle {
+    font-size: 1.728rem;
+  }
+
   &__item {
     @include breakpoint(large) {
       &:nth-child(even) {

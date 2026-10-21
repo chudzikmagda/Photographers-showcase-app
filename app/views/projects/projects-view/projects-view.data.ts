@@ -4,15 +4,15 @@ import type { ProjectData } from '~/views/projects/projects.types';
 
 export const projects: ProjectData[] = [
   {
-    baseKey: Projects.WOMENSICEHOCKEYCRACOVIA,
-    image:
-      '/images/galleries/projects/womens-ice-hockey-cracovia/magda-chudzik-documentary-photography-womens-ice-hockey-001.webp',
-    cta: `/${Paths.PROJECTS}/${ProjectPaths.WOMENS_ICE_HOCKEY_CRACOVIA}`,
-  },
-  {
     baseKey: Projects.KINGOFBIEBRZA,
     image:
       '/images/galleries/projects/king-of-biebrza-river/magda-chudzik-documentary-photography-king-of-biebrza-river-001.webp',
     cta: `/${Paths.PROJECTS}/${ProjectPaths.KING_OF_BIEBRZA}`,
+  },
+  {
+    baseKey: Projects.WOMENSICEHOCKEYCRACOVIA,
+    image:
+      '/images/galleries/projects/womens-ice-hockey-cracovia/magda-chudzik-documentary-photography-womens-ice-hockey-001.webp',
+    cta: `/${Paths.PROJECTS}/${ProjectPaths.WOMENS_ICE_HOCKEY_CRACOVIA}`,
   },
 ];

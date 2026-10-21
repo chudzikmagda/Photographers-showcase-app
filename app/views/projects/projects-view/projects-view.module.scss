@@ -3,6 +3,10 @@
 @use '~/assets/styles/mixins.scss' as *;
 @use '~/assets/styles/wrappers.scss' as *;
 
+.title {
+  font-size: 1.728rem;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -31,6 +35,8 @@
   }
 
   &__title {
+    margin: 0;
+    font-size: inherit;
     line-height: 1.1;
     font-weight: 600;
   }

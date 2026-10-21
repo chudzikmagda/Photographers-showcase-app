@@ -13,7 +13,7 @@ const SocialMediaMenu: React.FC<SocialMediaMenuProps> = ({ variant }) => {
           <a
             href={socialMedia.path}
             rel="noopener noreferrer"
-            className={styles.menu__link}
+            className={`${styles.menu__link} ${variant === SocialMediaMenuVariant.TEXT ? '' : styles['menu__link--icon']}`}
             target="_blank"
             aria-label={socialMedia.name}
             key={socialMedia.name}

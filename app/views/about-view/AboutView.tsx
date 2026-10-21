@@ -21,7 +21,7 @@ const AboutView: React.FC = () => {
           </div>
           <div className={styles['wrapper-s']}>
             <h1>{t('AboutView.title')}</h1>
-            <h4>
+            <p className={styles['about-me__intro']}>
               <Trans
                 t={t}
                 i18nKey="AboutView.intro"
@@ -36,7 +36,7 @@ const AboutView: React.FC = () => {
                   ),
                 }}
               />
-            </h4>
+            </p>
             <p>
               <Trans
                 t={t}

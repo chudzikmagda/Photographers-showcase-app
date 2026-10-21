@@ -26,15 +26,19 @@ const Menu: React.FC = () => {
   return (
     <>
       <button
+        type="button"
         onClick={onMobileMenuToggle}
         className={`${styles.hamburger} ${isOpen ? styles['hamburger--isOpen'] : ''}`}
+        aria-label={isOpen ? t('Menu.closeMenu') : t('Menu.openMenu')}
+        aria-expanded={isOpen}
+        aria-controls="main-navigation"
       >
         <span className={styles.hamburger__item}></span>
         <span className={styles.hamburger__item}></span>
         <span className={styles.hamburger__item}></span>
       </button>
 
-      <nav className={styles.menu}>
+      <nav id="main-navigation" className={styles.menu}>
         {menu.map((menuItem: MenuItem, index: number) => {
           return (
             <span key={menuItem.menuTitle + index} className={styles['menu__item-wrapper']}>
